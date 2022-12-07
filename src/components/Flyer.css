@@ -1,0 +1,92 @@
+.border {
+ 
+  margin: 10px;
+}
+
+.navContainer {
+  display:flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.menu {
+  
+  max-width: 100%;
+  align-self: center;
+}
+
+.flyerB {
+  height: auto;
+  max-width: 100%;
+}
+
+.meat {
+  grid-area: meat;
+  width: 100%;
+}
+
+.raspberries{
+  grid-area: raspberries;
+  margin-left:50px;
+  width: 81%;
+}
+.raspberries2{
+  grid-area: raspberries2;
+  margin-left:50px;
+  width: 81%;;
+}
+
+
+
+
+
+.points {
+  grid-area: points;
+  width: 100%;
+}
+.points2{
+  grid-area: points2;
+  width: 100%;
+}
+
+.cereal {
+  grid-area: cereal;
+  width: 100%;
+}
+
+.bacon {
+  grid-area: bacon;
+  width: 100%;
+}
+
+.gridSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 15px;
+  grid-template-areas:
+  "meat meat raspberries points"
+  "cereal bacon raspberries2 points2"
+}
+
+
+
+
+@media only screen and (max-width: 900px) {
+
+    .gridSection{
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 10px;
+      grid-template-areas:
+      "meat meat raspberries"
+      "points cereal bacon"
+    }
+    .points2, .raspberries2 {
+      display: none;
+    }
+
+    .flyerB,.menu {
+  max-width: 40%;
+}
+
+}
